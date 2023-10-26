@@ -1,0 +1,11 @@
+node_modules/
+npm-debug.log
+*.log
+.DS_Store
+nodemon.json
+.gcloudignore
+.git
+.gitignore
+#!include:.gitignore
+cloud-functions.sh
+.vscode/
