@@ -39,7 +39,7 @@ You will need `Cloud Functions Developer (roles/cloudfunctions.developer)` IAM r
 
 ### 2. Deploy as a Google Cloud Function
 
-1. Update your domain name on line 9 of [index.js](./index.js) file.
+1. Update your domain name on line 9 of [index.js](./index.js#L9) file.
 
 2. Deploy your Cloud Function using below gcloud command. Make sure to replace `[YOUR_HUBSPOT_PRIVATE_APP_API_KEY]` with your actual HubSpot API key, `[YOUR_GCP_PROJECT_REGION]` with your GCP region and `[YOUR_GCP_PROJECT_ID]` with your GCP project ID.
 
