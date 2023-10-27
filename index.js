@@ -6,7 +6,7 @@ app.use(express.json());
 
 // Define a middleware to enable CORS.
 app.use((req, res, next) => {
-	res.header('Access-Control-Allow-Origin', '[YOUR_WEBSITE_DOMAIN]'); // Update your website's domain - eg: https://adoutreach.com.
+	res.header('Access-Control-Allow-Origin', '*'); // Replace '*' with your website's domain - eg: https://adoutreach.com.
 	res.header('Access-Control-Allow-Methods', 'POST');
 	res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 	next();
@@ -109,14 +109,14 @@ app.post('/update-hubspot-crm', async (req, res) => {
 				properties: {
 					firstname: first_name,
 					lastname: last_name,
-					utm_campaign: utm_campaign,
-					utm_source: utm_source,
-					utm_medium: utm_medium,
 				},
 			};
 
 			// Define additional properties you want to update.
 			const additionalProperties = {
+				utm_campaign: utm_campaign,
+				utm_source: utm_source,
+				utm_medium: utm_medium,
 				utm_content: utm_content,
 				utm_term: utm_term,
 				hs_google_click_id: hs_google_click_id,
