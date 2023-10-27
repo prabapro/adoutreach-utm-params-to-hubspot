@@ -6,7 +6,7 @@ This is an Express.js application that handles HTTP POST requests to create or u
 
 1. A Google Cloud Project with necessary [IAM permissions](#gcp-iam-permissions).
 
-2. Hubspot Private App Access Token (API Key) - 🔗 [Documentation](https://cloud.google.com/sdk/docs/install)
+2. Hubspot Private App Access Token (API Key) - 🔗 [Documentation](https://developers.hubspot.com/docs/api/private-apps)
 
 3. gcloud CLI installed on your local machine - 🔗 [Documentation](https://cloud.google.com/sdk/docs/install)
 
