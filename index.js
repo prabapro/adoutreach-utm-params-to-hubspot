@@ -106,14 +106,13 @@ app.post('/update-hubspot-crm', async (req, res) => {
 
 			// Construct the updateRequestBody object with properties to update.
 			const updateRequestBody = {
-				properties: {
-					firstname: first_name,
-					lastname: last_name,
-				},
+				properties: {},
 			};
 
-			// Define additional properties you want to update.
-			const additionalProperties = {
+			// Define properties you want to update.
+			const updateProperties = {
+				firstname: first_name,
+				lastname: last_name,
 				utm_campaign: utm_campaign,
 				utm_source: utm_source,
 				utm_medium: utm_medium,
@@ -123,9 +122,9 @@ app.post('/update-hubspot-crm', async (req, res) => {
 				hs_facebook_click_id: hs_facebook_click_id,
 			};
 
-			// Iterate over additional properties and add them to updateRequestBody if they have a value.
-			for (const propName in additionalProperties) {
-				const propValue = additionalProperties[propName];
+			// Iterate over properties and add them to updateRequestBody if they have a value.
+			for (const propName in updateProperties) {
+				const propValue = updateProperties[propName];
 				if (propValue !== undefined && propValue !== null && propValue !== '') {
 					updateRequestBody.properties[propName] = propValue;
 				}
