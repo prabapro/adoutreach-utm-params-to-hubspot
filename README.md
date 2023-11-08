@@ -53,7 +53,7 @@ This is an Express.js application that handles HTTP POST requests to create or u
 
 ```
 gcloud functions deploy updateHubspotContact \
- --runtime nodejs16 \
+ --runtime nodejs18 \
  --trigger-http \
  --allow-unauthenticated \
  --update-env-vars HUBSPOT_API_KEY=[YOUR_HUBSPOT_PRIVATE_APP_API_KEY] \
