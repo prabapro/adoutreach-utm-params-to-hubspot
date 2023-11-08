@@ -12,7 +12,15 @@ This is an Express.js application that handles HTTP POST requests to create or u
 
 ## GCP IAM Permissions
 
-You will need `Cloud Functions Developer (roles/cloudfunctions.developer)` IAM role for deploying this application as a Google Cloud Function. Refer [this documentation](https://cloud.google.com/functions/docs/reference/iam/roles#cloudfunctions.developer) for more details.
+- You will need `Cloud Functions Developer (roles/cloudfunctions.developer)` IAM role for deploying this application as a Google Cloud Function. Refer [this documentation](https://cloud.google.com/functions/docs/reference/iam/roles#cloudfunctions.developer) for more details.
+
+- In addition to above, the user must be added to the service account as well;
+  1. Go to **IAM and Admin > Service Accounts**
+  1. Click on the default service account `[project_id]@appspot.gserviceaccount.com`
+  1. Click on **Permissions** tab
+  1. Click on **Grant Access** button
+  1. Enter the user email & assign `Service Account User (iam.serviceAccountUser)` role
+  1. Click **Save**
 
 ## Setup
 
