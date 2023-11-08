@@ -9,3 +9,4 @@ nodemon.json
 #!include:.gitignore
 cloud-functions.sh
 .vscode/
+README.md

@@ -12,7 +12,10 @@ This is an Express.js application that handles HTTP POST requests to create or u
 
 ## GCP IAM Permissions
 
-- You will need `Cloud Functions Developer (roles/cloudfunctions.developer)` IAM role for deploying this application as a Google Cloud Function. Refer [this documentation](https://cloud.google.com/functions/docs/reference/iam/roles#cloudfunctions.developer) for more details.
+- You will need below mentioned IAM role for deploying this application as a Google Cloud Function. Refer [this documentation](https://cloud.google.com/functions/docs/reference/iam/roles#cloudfunctions.developer) for more details.
+
+  1. Cloud Functions Developer `(roles/cloudfunctions.developer)`
+  2. Service Account Admin `(roles/iam.serviceAccountAdmin)`
 
 - In addition to above, the user must be added to the service account as well;
   1. Go to **IAM and Admin > Service Accounts**
@@ -53,7 +56,7 @@ This is an Express.js application that handles HTTP POST requests to create or u
 
 ```
 gcloud functions deploy updateHubspotContact \
- --runtime nodejs18 \
+ --runtime nodejs20 \
  --trigger-http \
  --allow-unauthenticated \
  --update-env-vars HUBSPOT_API_KEY=[YOUR_HUBSPOT_PRIVATE_APP_API_KEY] \
@@ -61,7 +64,7 @@ gcloud functions deploy updateHubspotContact \
  --project=[YOUR_GCP_PROJECT_ID]
 ```
 
-3. Go to The **Cloud Function > Trigger** & copy the **Trigger URL**
+3.  Go to The **Cloud Function > Trigger** & copy the **Trigger URL**
 
 > Eg: `https://[PROJECT_REGION]-[PROJECT_ID].cloudfunctions.net/updateHubspotContact`
 
